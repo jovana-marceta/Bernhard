@@ -1,0 +1,34 @@
+// Fonts
+$font-primary: 'Raleway', sans-serif;
+$font-secondary: 'Frank Ruhl Libre', serif;
+$font-third: 'Noto Serif', sans-serif;
+
+// Screen Resolutions
+
+$xl-lg: 1580px;
+$xl: 1440px;
+$lg: 1280px;
+$md-lg: 1024px;
+$md: 768px;
+$sm: 480px;
+$sm-extra: 320px;
+
+
+// Colors
+$black: #000;
+$white: #fff;
+$orher: #C4BC94;
+$dark: #262626;
+$gray: #F3F3F3;
+
+
+$site-colors: (
+	'black': $black,
+	'white': $white,
+	'orher': $orher,
+	'gray': $gray,
+	'dark': $dark
+) !default;
+
+
+

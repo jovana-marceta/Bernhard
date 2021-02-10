@@ -1,0 +1,22 @@
+.banner-icon {
+	color: $white;
+	font-size: 15px;
+	&:not(:last-child) {
+		margin-right: 20px;
+	}
+	@include hover {
+		color: $orher;
+		transition: all .5s ease-out;
+	}
+}
+
+.nav-icon {
+	font-size: 10px;
+}
+
+.search-icon {
+	color: $dark; 
+	cursor: pointer;
+	left: 15px;
+	position: absolute; 
+}

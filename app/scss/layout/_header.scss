@@ -1,0 +1,46 @@
+.header {
+	position: absolute;
+	width: 100%;
+	z-index: 999;
+
+	@include for-extra-large-lg-screen {
+		padding: 0 20px;
+	}
+
+	&-container {
+		align-items: center;
+		background-color: transparent;
+		justify-content: space-between;
+		padding-top: 50px;
+	}
+
+	&-logo {
+		font-size: 33px;
+		font-family: $font-secondary;
+		letter-spacing: 20px;
+		padding-top: 50px;
+		text-transform: uppercase;
+		@include absolute-center();
+
+		@include for-medium-screen {
+			font-size: 25px;
+			letter-spacing: 15px;
+		}
+
+		@include for-small-screen {
+			font-size: 20px;
+			letter-spacing: 15px;
+		}
+	}
+
+	&-search-icon {
+		position: absolute;
+		right: 20px;
+	}
+
+}
+
+
+
+
+

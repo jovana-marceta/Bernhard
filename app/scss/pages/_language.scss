@@ -1,0 +1,67 @@
+.language {
+	bottom: 0;
+	// display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 3;
+	overflow: hidden;
+	@extend %bg-image;
+
+	.popup-content {
+		.popup-header {
+			margin-bottom: 170px;
+		}
+	
+		a.closebtn {
+			color: $white;
+			font-size: 43px;
+			position: absolute;
+			right: 5px;
+			@include hover {
+				color: $orher;
+				text-decoration: none;
+			}
+		}
+
+		.language-title {
+			border-bottom: 2px solid rgba($orher, .5);
+			padding-bottom: 200px;
+		}
+
+		.language-boxes {
+			align-items: flex-start;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding-top: 50px;
+			@include for-medium-large-screen {
+				padding-top: 20px;
+			}
+		}
+		
+		.language-box {
+			a {
+				color: $white;
+				@include hover {
+					color: $orher!important;
+					text-decoration: none;
+				}
+			}
+			@include for-large-screen {
+				margin: 0 20px 20px 0;
+				justify-content: flex-start;
+				width: 25%;
+				text-align: center;
+			}
+			@include for-medium-screen {
+				margin: 0 10px 10px 0;
+				width: 25%;
+			}
+		}
+	}
+
+}
+

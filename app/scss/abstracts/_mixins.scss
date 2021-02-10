@@ -1,0 +1,61 @@
+@mixin absolute-center() {
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+}
+
+@mixin border-radius($pixel) {
+	border-radius: $pixel;
+}
+
+@mixin hover {
+	&:hover {
+		@content;
+	}	
+}
+
+// Mixins for media queries
+@mixin for-extra-small-screen {
+	@media (max-width: $sm-extra) { @content; }
+}
+
+@mixin for-small-screen {
+	@media (max-width: $sm) { @content; }
+}
+
+@mixin for-medium-screen{
+	@media (max-width: $md) { @content; }
+}
+
+@mixin for-medium-large-screen {
+	@media (max-width: $md-lg) { @content; }
+}
+
+@mixin for-large-screen {
+	@media (max-width: $lg) { @content; }
+}
+
+@mixin for-extra-large-screen {
+	@media (max-width: $xl) { @content; }
+}
+
+@mixin for-extra-large-lg-screen {
+	@media (max-width: $xl-lg) { @content; }
+}
+
+
+@each $colors-name in $site-colors {
+	$name: nth($colors-name, 1);
+	$color: nth($colors-name, 2);
+	.bg-#{$name} {
+		background-color: $color;
+	}
+	.color-#{$name} {
+		color: $color;
+	}
+}
+
+
+
+

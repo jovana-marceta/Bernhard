@@ -1,0 +1,47 @@
+.search {
+
+	.wrap {
+		height: auto;
+	}
+
+	.accordion-container  {
+		bottom: 0;
+		position: absolute;
+		width: 100%;
+	}
+	
+	@include for-medium-screen {
+		padding: 0 20px;
+	}
+
+	&-title {
+		margin-bottom: 18px;
+	}
+	
+	&-input {
+		align-items: center;
+		border: 1px solid rgba($orher, .5);
+		margin: 0 auto 100px auto;
+		padding: 10px;
+		width: 755px;
+	
+		@include for-medium-screen {
+			width: 100%;
+		}
+	
+		input {
+			width: 100%;
+			padding: 0 30px;
+		}
+	}
+
+}
+
+.closebtn--search {
+	color: #fff;
+	font-size: 43px;
+	@include hover {
+		color: $orher;
+		text-decoration: none;
+	}
+}

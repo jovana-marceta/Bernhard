@@ -1,0 +1,299 @@
+.products {
+	background: linear-gradient(90deg, $dark 50%, $white 50%);
+	padding: 40px 20px 10px;
+
+	@include for-medium-large-screen {
+		background: $dark;
+		padding: 40px 40px 10px 40px;
+	}
+
+	@include for-medium-screen {
+		padding: 20px 0;
+	}
+
+	&-row {
+		align-items: center;
+		height: 600px;
+		justify-content: space-between;
+		
+		@include for-medium-large-screen { 
+			flex-direction: column;
+			height: 100%;
+		}
+
+		@include for-medium-large-screen { 
+			margin: 0 auto;
+			text-align: center;
+		}
+
+	} 
+
+	&-row--alannis {
+		align-items: flex-start;
+	}
+
+	&-col {
+		h2 {
+			margin-bottom: 50px;
+		}
+
+		h3 {
+			color: $orher;
+		}
+
+		@include for-medium-large-screen {
+			width: 100%;
+			margin-right: 30px;
+		}
+
+	}
+
+	&-col-second {
+		align-items: center; 
+		display: flex;
+		justify-content: center;
+		margin-right: 30px;
+	}
+
+	.read-more-link {
+		margin-bottom: 16px;
+		@include hover {
+			color: $white;
+		}
+	}
+
+	&-img-holder {
+		border: 1px solid transparent;
+		cursor: pointer;
+		padding: 10px;
+		&:not(:last-of-type) {
+			margin-bottom: 70px;
+		}
+	}
+
+	.active, .products-img-holder:hover {
+		border: 1px solid $orher;
+	}
+
+	&--alannis-holder {
+		padding: 10px 40px;
+	}
+
+	&-dimensions {
+		@include for-medium-large-screen {
+			align-items: flex-start;
+			justify-content: center;
+		}
+	}
+
+	&--alannis-title {
+		color: $orher;
+		margin-bottom: 0;
+	}
+
+	&-list-item {
+		list-style: disc;
+	}
+
+	.product-img-small {
+		width: 200px;
+		@include for-large-screen {
+			width: 150px;
+		}
+	}
+
+	.product--alannis-img {
+		width: 112px;
+		margin: 0 auto;
+	}
+
+	//btn arrow
+	a {
+		cursor: pointer;
+		transition: all 0.3s ease;
+		margin-bottom: 50px;
+		@include hover {
+			color: $white;
+		}
+	}
+
+	a .arrow {
+		width: 10%;
+		transition: all 0.3s ease;
+	}
+	
+	a:hover .arrow {
+		width: 20%;
+	}
+	
+	.arrow {
+		background: $orher;
+		border: 1px solid $orher;
+		margin-right: 2em;
+		position: relative;
+	}
+	
+	.arrow .head,
+	.arrow .head:after {
+		border: 1.5px solid $orher;
+		border-radius: 2px;
+		width: 8px;
+		position: absolute;
+		right: -5px;
+		top: 2px;
+		transform: rotate(-45deg);
+	}
+	
+	.arrow .head:after {
+		content: "";
+		border-color: $orher;
+		right: -5px;
+		top: -5px;
+		transform: rotate(90deg);
+	}
+}
+
+#products-img {
+	position: relative;
+	width: 600px;
+	z-index: 2;
+	@include for-extra-large-screen {
+		width: 600px;
+	}
+	@include for-large-screen {
+		width: 500px;
+	}
+	@include for-medium-screen {
+		width: 100%;
+	}
+}
+
+.product-col-holder {
+	@include for-medium-large-screen { 
+		display: none;
+	}
+}
+
+.product-slider {
+	margin-bottom: 20px;
+	width: 100%;
+	@media only screen and (min-width: $md-lg) {
+		display: none;
+	}
+
+	// Dots
+	li button:before,
+	li.slick-active button:before {
+		color: transparent;
+		opacity: 1;
+	}
+
+	li button:before{
+		background-color: transparent;
+		border: 1px solid $orher;
+		border-radius: 50%;
+		display: inline-block;
+		height: 10px;
+		width: 10px;
+	}
+
+	li.slick-active button:before {
+		background-color: $orher;
+	}
+}
+
+.product-slider-img {
+	margin: 0 auto;
+	width: 200px;
+}
+
+.circle {
+	border: 1px solid $orher;
+	border-radius: 50%;
+	border-style: dashed;
+	height: 548px;
+	flex-wrap: wrap;
+	width: 548px;
+
+	&-content {
+		@include for-medium-screen {
+			display: none;
+		}
+	}
+
+	@include for-medium-screen {
+		height: 100vw;
+		width: calc(100vw - 40px);
+	}
+
+	&-square {
+		align-items: center;
+		justify-content: center;
+		height: 50%;
+		width: 50%;
+	}
+	
+	&-text  {
+		color: $orher;
+		position: relative;
+		&:first-of-type {
+			left: -30px;
+		}
+	}
+
+	.circle-text-p {
+		position: absolute;
+		white-space: nowrap;
+
+		@include for-extra-large-screen {
+			font-size: 12px;
+		}
+	}
+
+	&-dot {
+		display: block;
+		width: 11px;
+		height: 11px;
+		border-radius: 100%;
+		background-color: $orher;
+		border: 1px solid $orher;
+		background-clip: content-box;
+		padding: 2px;
+	}
+
+	.circle-topleft {
+		transform: translateY(-97px);
+	}
+	.circle-topright {
+		transform: translateX(8px) translateY(-97px);
+	}
+	.circle-bottomleft {
+		transform: translateX(-50px) translateY(64px);
+	}
+	.circle-bottomright {
+		transform: translateX(64px) translateY(50px);
+	}
+	
+}
+
+.circle--alannis {
+	visibility: hidden;
+}
+
+
+#circleText1 {
+	left: -50px;
+	top: -20px;
+}
+#circleText2 {
+	left: 77px;
+	top: -20px;
+}
+#circleText3 {
+	left: -107px;
+}
+#circleText4 {
+	left: 50px;
+}
+
+

@@ -1,0 +1,129 @@
+.footer {
+	padding: 48px 0 20px 0;
+	@extend %bg-image;
+
+	@include  for-extra-large-screen {
+		padding: 50px 30px 20px 30px;
+	}
+
+	&-container {
+		position: relative;
+		z-index: 1;
+	}
+	
+	&-top {
+		align-items: center;
+		border-bottom: 1px solid $orher;
+		justify-content: space-between;
+		padding-bottom: 46px;
+		
+		@include for-medium-large-screen {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+	
+	&-title {
+		color: $orher;
+		margin-bottom: 6px;
+		letter-spacing: 1px;
+	}
+	
+	&-description {
+		@include for-medium-large-screen {
+			margin-bottom: 20px;
+		}
+	}
+	
+	&-btns {
+		.btn-primary:first-child {
+			margin-right: 10px;
+		}
+	}
+	
+	&-bottom {
+		padding-top: 50px;
+
+		@include for-medium-large-screen {
+			text-align: center;
+		}
+	}
+	
+	&-logo {
+		display: inline-block;
+		font-family: $font-secondary;
+		font-size: 30px;
+		letter-spacing: 23px;
+		margin-bottom: 46px;
+		text-transform: uppercase;
+
+		@include for-small-screen {
+			font-size: 20px;
+		}
+	}
+	
+	&-list {
+		align-items: flex-start;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 41px;
+	}
+	
+	&-box {
+		&-title {
+			margin-bottom: 13px;
+		}
+
+		@include for-medium-large-screen {
+			margin-bottom: 20px;
+			text-align: center;
+			width: 50%;
+		}
+
+		@include for-small-screen {
+			width: 100%;
+		}
+	}
+	
+	&-items{
+		&-item {
+			&:not(:last-child) {
+				margin-bottom: 2px;
+			}
+		}
+	
+		&-link {
+			color: $white;
+
+			@include hover {
+				color: $white;
+				text-decoration: line-through;
+			}
+		}
+	
+	}
+	
+	&-copyright {
+		align-items: center;
+		justify-content: space-between;
+
+		&-link {
+			color: $orher;
+			text-decoration: underline;
+
+			@include hover {
+				color: $orher;
+			}
+		}
+
+		@include for-small-screen {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+	
+	
+}
+
+
+

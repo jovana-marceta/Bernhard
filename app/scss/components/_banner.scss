@@ -1,0 +1,268 @@
+.banner {
+	overflow-x: hidden;
+
+	&-slider-item {
+		height: 100vh;
+		position: relative;
+	}
+	
+	&-bg {
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		filter: brightness(0.2);
+		@extend %bg-image;
+	}
+	
+	&-box {
+		filter: none;
+		position: relative;
+		text-align: center;
+		@include absolute-center();
+	}
+	
+	&-heading {
+		margin-bottom: 10px;
+	}
+	
+	&-text {
+		margin-bottom: 20px;
+	}
+	
+	&-social {
+		bottom: 50px;
+		left: 50%;
+		transform:translate(-50%,-50%);
+		position: absolute;
+		z-index: 2;
+	}
+	
+	&-menu {
+		border-top: 1px solid $orher;
+		border-bottom: 1px solid $orher;
+		position: absolute;
+		padding: 20px 20px 20px 30px;
+		right: 200px;
+		top: 50%;
+		transform: translateY(-50%);
+		@include for-large-screen() {
+			display: none;
+		}
+	}
+	
+	&-menu-rotated {
+		font-weight: bold;
+		left: -36px;
+		position: absolute;
+		transform: rotate(270deg);
+		top: 45%;
+	}
+	
+	&-menu-item {
+		color: $white;
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+		@include hover {
+			color: $orher;
+			text-decoration: line-through;
+		}
+	}
+
+	&--small {
+		padding: 360px 0 140px;
+	}
+	
+	&--search {
+		bottom: 0;
+		height: 100%;
+		left: 0;
+		min-height: 100vh;
+		right: 0;
+		top: 0;
+		width: 100%;
+		z-index: 3;
+	}
+	
+	&-tags {
+		bottom: 20px;
+		position: absolute; 
+		z-index: 5; 
+		
+		span {
+			display: inline-block;
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+	}
+	
+	&-arrow {
+		font-size: 10px;
+		margin-right: 10px;
+	}
+	
+	&--accordion {
+		padding: 200px 0 0;
+	
+		h1 {
+			margin-bottom: 50px;
+		}
+	
+	}
+	
+	&-tags--accordion {
+		bottom: 0;
+		position: relative;
+	}
+	
+	&-slider {
+
+		// Slick arrows
+		.slick-custom-arrow {
+			color: $white;
+			position: absolute;
+			bottom: 200px;
+			z-index: 2;
+			@include for-extra-large-screen {
+				display: none;
+			}
+		}
+	
+		.slick-custom-arrow-left {
+			left: 20%;
+	
+			.arrow .head, .arrow .head:after {
+				left: -5px;
+				transform: rotate(50deg);
+			}
+		}
+	
+		.slick-custom-arrow-right {
+			right: 20%;
+		}
+	
+		.arrow{
+			background: $white;
+			border: 1px solid $white;
+			// margin-right: 5em;
+			position: relative;
+			&:hover {
+				background:$orher;
+				border: 1px solid $orher;
+			}
+		}
+		
+		.arrow .head,
+		.arrow .head:after {
+			background-color: $white;
+			border: 1.5px solid $white;
+			border-radius: 2px;
+			width: 8px;
+			position: absolute;
+			right: -5px;
+			top: 2px;
+			transform: rotate(-45deg);
+			&:hover {
+				background-color: $orher;
+				border: 1.5px solid $orher;
+			}
+		}
+	
+		.arrow .head:after {
+			content: "";
+			border-color: white;
+			right: -5px;
+			top: -5px;
+			transform: rotate(90deg);
+			@include hover {
+				border-color: $orher;
+			}
+		}
+	
+		a{
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+	
+	
+		a .arrow {
+			width: 100px;
+			transition: all 0.3s ease;
+			@include for-extra-large-screen {
+				display: none;
+			}
+		}
+	
+		a:hover .arrow {
+			width: 130px;
+		}
+	
+		.slick-custom-arrow-left a .arrow {
+			float: right;
+		}
+	
+		// Slick dots
+		.slick-dots {
+			display: flex;
+			flex-direction: column;
+			left: 200px;
+			top: 63%;
+			transform: translateY(-50%);
+	
+			position: absolute;
+			@include  for-medium-large-screen {
+				left: 100px;
+			}
+	
+			@include  for-small-screen {
+				display: none;
+			}
+	
+			&::before {
+				content: '01';
+				font-family: $font-third;
+				position: absolute;
+				top: -25px;
+			}
+	
+			&::after {
+				content: '03';
+				font-family: $font-third;
+				bottom: 150px;
+				position: absolute;
+	
+				@include for-extra-large-screen {
+					bottom: 111px;
+				}
+	
+				@include for-large-screen {
+					bottom: 100px;
+				}
+			}
+		}
+	
+		.slick-dots li {
+			background: $orher;
+			height: 70px;
+			width: 2px;
+		}
+	
+		li.slick-active {
+			background: $white;
+			width: 3px;
+			height: 70px;
+		}
+	
+		.slick-dotted.slick-slider {
+			margin-bottom: 0;
+		}
+	}
+	
+	.slick-dotted.slick-slider {
+		margin-bottom: 0;
+	}
+}
+

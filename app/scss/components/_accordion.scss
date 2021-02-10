@@ -1,0 +1,108 @@
+
+.accordion {
+	background-color: transparent;
+	display: flex;
+	text-align: center;
+	width: 100%;
+
+	h3 {
+		color: $orher;
+		transform: rotate(270deg);
+		white-space: nowrap;
+
+		@include for-medium-screen {
+			transform: rotate(0);
+		}
+	}
+
+	@include for-medium-screen {
+		flex-direction: column;
+	}
+
+	&:last-child {
+		border-right: 1px solid $orher;
+	}
+
+	&-container {
+		border-top: 1px solid $orher;
+	
+		@include for-medium-screen {
+			border-top: 0;
+		}
+	}
+	
+	&-item {
+		border-left: 1px solid $orher;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 450px;
+		width: 100px;
+	
+		&:first-child {
+			border-left: 0;
+		}
+	
+		@include for-medium-screen {
+			border-top: 1px solid $orher;
+			height: 100px;
+			width: 100%;
+		}
+	}
+
+	&-content {
+		color: #222;
+		display: none;
+		height: 450px;
+		position: relative;
+		width: 0;
+
+		&:last-child {
+			border-right: 1px solid $orher;
+		}
+
+		@include for-medium-screen {
+			border-top: 1px solid $orher;
+		}
+	}
+
+	&-list {
+		left: 8%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&-list-item {
+		text-align: left;
+
+		&:not(:last-child) {
+			margin-bottom: 5px;
+		}
+	}
+
+	&-link {
+		color: $white;
+
+		@include hover {
+			color: $white;
+			text-decoration: line-through;
+		}
+	}
+
+	&-container--search {
+		@media (min-width: 1024px) {
+			bottom: 0;
+			position: absolute;
+			width: 100vw;
+		}
+	}
+}
+
+.is-active {
+	h3 {
+		color: $white;
+	}
+}
+

@@ -1,0 +1,65 @@
+.resources {
+	background-color: $dark;
+
+	&-container {
+		align-items: center;
+		justify-content: space-between;
+		@include for-large-screen {
+			flex-direction: column;
+			padding-top: 25px;
+		}
+	
+		h2 {
+			@include for-extra-large-screen {
+				margin-bottom: 25px;
+				text-align: center;
+			}
+		}
+	}
+	
+	&-boxes {
+		align-items: stretch;
+		@include for-large-screen {
+			flex-direction: column;
+			width: 100%;
+		}
+	}
+	
+	&-box {
+		align-items: center;
+		display: flex;
+		height: 637px;
+		justify-content: center;
+		width: 228px;
+		@extend %bg-image;
+	
+		h3 {
+			margin: 0 auto;
+			transform: rotate(270deg);
+			text-align: center;
+			white-space: nowrap;
+			@include for-extra-large-screen {
+				transform: rotate(0deg);
+			}
+		}
+
+		@include hover {
+			.overlay-dark {
+				background-color: rgba($dark, .8);
+			}
+		
+			.resources-outer{
+				color: $orher;
+				text-decoration: line-through;
+			}
+		}
+	
+		@include for-large-screen {
+			height: 350px;
+			width: 100%;
+		}
+	
+	}
+	
+}
+

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Jovana Marčeta">
+	<meta name="description" content="Description goes here">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<!-- Font Awesome Icons -->
+	<script src="https://kit.fontawesome.com/24d6fec78d.js" crossorigin="anonymous"></script>
+	<!-- CSS Reset -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<!-- Griddd -->
+	<link rel="stylesheet" href="css/flexboxgrid.css">
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<!-- Slick Slider -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="css/styles.css">
+	<title>BERNHARDT | Alannis</title>
+</head>
+<body>
+
+	<!-- HEADER	 -->
+	<header class="header set-relative">
+		<div class="wrap">
+			<div class="header-container set-flex">
+				<nav class="nav">
+					<ul class="nav-list set-flex" role="menubar">
+						<li class="nav-item set-flex" role="menuitem">
+							<a class="nav-link set-relative" href="#">Products
+								<i class="nav-icon fas fa-chevron-down ml-8">
+									<div class="tooltip-item">
+										<p class="tooltip-text">New Products</p>
+										<p class="tooltip-text">Bedroom</p>
+										<p class="tooltip-text">Dinning Room</p>
+										<p class="tooltip-text">Home Office</p>
+										<p class="tooltip-text">Living Room</p>
+										<p class="tooltip-text">Outdoor</p>
+									</div>
+								</i>
+							</a>
+						</li>
+						<li class="nav-item" role="menuitem">
+							<a class="nav-link" href="#">Collection</a>
+						</li>
+						<li class="nav-item set-flex" role="menuitem">
+							<a class="nav-link set-relative" href="#">Design Resources
+								<i class="nav-icon fas fa-chevron-down ml-8">
+									<div class="tooltip-item">
+										<p class="tooltip-text">New Products</p>
+										<p class="tooltip-text">Bedroom</p>
+										<p class="tooltip-text">Dinning Room</p>
+										<p class="tooltip-text">Home Office</p>
+										<p class="tooltip-text">Living Room</p>
+										<p class="tooltip-text">Outdoor</p>
+									</div>
+								</i>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<span class="header-logo color-white">Bernhard</span>
+				<nav class="nav">
+					<ul class="nav-list set-flex" role="menubar">
+						<li class="nav-item" role="menuitem">
+							<a class="nav-link" href="#">Contact</a>
+						</li>
+						<li class="nav-item set-flex" role="menuitem">
+							<a class="nav-link" href="#">
+								<i class="nav-icon fas fa-search mr-8" onclick="openSearchPopup()"></i> Search
+							</a>
+						</li>
+						<li class="nav-item set-flex" role="menuitem">
+							<a class="nav-link" href="#">
+								<i class="nav-icon fas fa-globe mr-8" id="o-open"></i> Eng
+								<i id="test" class="nav-icon fas fa-chevron-down ml-8" onclick="openPopup()"></i>
+							</a>
+						</li>
+					</ul>
+				</nav>
+
+				<!-- hamburger menu-->
+				<div class="hamburger-menu">
+					<div id="toggleIcon" onclick="menuToggle()"></div>
+					<div id="hamburger-overlay">
+						<ul class="hamburger-list">
+							<li><a href="#">Products</a></li>
+							<li><a href="#">Collection</a></li>
+							<li><a href="#">Design Resources</a></li>
+							<li><a href="#">Contact</a></li>
+							<li><a href="#">Search</a></li>
+							<li><a href="#">Eng</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- BANNER -->
+	<section class="banner banner--small set-relative" role="banner">
+		<div class="banner-bg" style="background-image: url('images/alannis-banner.png');">
+		</div>
+		<div class="banner-box">
+			<h1 class="h1 banner-heading">Alannis</h1>
+		</div>
+		<div class="wrap">
+			<div class="banner-tags">
+				<span>Home</span>
+				<i class="fas fa-chevron-right banner-arrow"></i>
+				<span>Products</span>
+				<i class="fas fa-chevron-right banner-arrow"></i>
+				<span>Bedroom</span>
+				<i class="fas fa-chevron-right banner-arrow"></i>
+				<span>Beds</span>
+				<i class="fas fa-chevron-right banner-arrow"></i>
+				<span class="color-orher">Allanis</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- PRODUCTS -->
+	<section class="products set-relative">
+		<div class="wrap">
+			<div class="products-row products-row--alannis set-flex">
+				<div class="products-col product-col--alannis">
+					<div class="mb-25">
+						<h2 class="h2 products--alannis-title" id="products-title">test1</h2>
+						<p id="products-manufacturer">Bernhard Interiror</p>
+					</div>
+					<div class="mb-20">
+						<h6 class="h6">Item:</h6>
+						<p id="products-description">Bernhardt Loft | Highland Park</p>
+					</div>
+					<div class="mb-20">
+						<h6 class="h6">Description:</h6>
+						<ul>
+							<li class="products-list-item">
+								<p>Wood-framed headboard and footboard, and wood side rails of oak<br> solids and rustic flat cut white oak veneers in Rustic Gray finish</p>
+							</li>
+							<li class="products-list-item">
+								<p>Woven Abaca headboard and footboard panel in Light Gray Wash finish</p>
+							</li>
+							<li class="products-list-item">
+								<p>Three slat support system with adjustable center supports</p>
+							</li>
+						</ul>
+					</div>
+					<div class="mb-20">
+						<h6 class="h6">Options:</h6>
+						<ul>
+							<li class="products-list-item">
+								<p>Optional Euro Slat System available. For mattress only applications. No <br>box springs required.</p>
+							</li>
+							<li class="products-list-item">
+								<p>Note: Headboard cannot be used alone. Must be ordered with footboard <br> and side rails.</p>
+							</li>
+						</ul>
+					</div>
+					<button type="button" class="button button--primary">Learn more about euro slat systems</button>
+				</div>
+				<div class="products-col products-col-second set-relative">
+					<div class="slika" style="position: absolute;"><img src="images/product1.png" id="products-img" alt=""></div>
+					<div class="circle circle--alannis set-relative set-flex"></div>
+				</div>
+				<div class="products-col product-col-holder" id="products-holder">
+					<div class="products-img-holder products--alannis-holder active">
+						<img data-id="3" onload="changeData($(this).attr('data-id'))" src="images/product4.png" onclick="changeData($(this).attr('data-id'))" src="images/product3.png" alt="" class="product-img-small product--alannis-img set-block">
+					</div>
+					<div class="products-img-holder">
+						<img data-id="4" onclick="changeData($(this).attr('data-id'))" src="images/product5.png" alt="" class="product-img-small product--alannis-img set-block">
+					</div>
+					<div class="products-img-holder">
+						<img data-id="5" onclick="changeData($(this).attr('data-id'))" src="images/product6.png" alt="" class="product-img-small product--alannis-img">
+					</div>
+				</div>
+	
+				<div class="product-slider set-relative" id="products-holder">
+					<div class="products-img-holder">
+						<img data-id="3" onclick="changeData($(this).attr('data-id'))" src="images/product4.png" alt="" class="product-slider-img">
+					</div>
+					<div  class="products-img-holder">
+						<img data-id="4" onclick="changeData($(this).attr('data-id'))" src="images/product5.png" alt="" class="product-slider-img">
+					</div>
+					<div  class="products-img-holder">
+						<img data-id="5" onclick="changeData($(this).attr('data-id'))" src="images/product6.png" alt="" class="product-slider-img" >
+					</div>
+					<div  class="products-img-holder">
+						<img data-id="5" onclick="changeData($(this).attr('data-id'))" src="images/product5.png" alt=""class="product-slider-img" >
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CARDS -->
+	<section class="cards set-relative">
+		<div class="wrap">
+			<h2 class="h2 border-none">Similar Products</h2>
+			<div class="cards-container">
+				<div class="cards-group set-flex">
+					<div class="cards-item set-relative set-flex">
+						<div>
+							<h3 class="h3">Oakley</h3>
+							<p>Woven Panel Bed</p>
+							<a href="#" class="link-primary set-flex">
+								<span>Read more</span>
+								<div class="arrow"><div class="head"></div>
+								</div>
+							</a>
+						</div>
+						<img src="images/card1.png" alt="" class="cards-img-small cards-img-small--first">
+						<img src="images/card2.png" alt="" class="cards-img-small cards-img-small--second">
+					</div>
+					<div class="cards-item set-relative set-flex">
+						<div>
+							<h3 class="h3">Rustic Matina</h3>
+							<p>Button-Tufted Bed</p>
+							<a href="#" class="link-primary set-flex">
+								<span>Read more</span>
+								<div class="arrow"><div class="head"></div>
+								</div>
+							</a>
+						</div>
+						<img src="images/card1.png" alt="" class="cards-img-small cards-img-small--first">
+						<img src="images/card2.png" alt="" class="cards-img-small cards-img-small--second">
+					</div>
+					<div class="cards-item set-relative set-flex">
+						<div>
+							<h3 class="h3">Upland</h3>
+							<p>Upholstered Panel Bed</p>
+							<a href="#" class="link-primary set-flex">
+								<span>Read more</span>
+								<div class="arrow"><div class="head"></div>
+								</div>
+							</a>
+						</div>
+						<img src="images/card1.png" alt="" class="cards-img-small cards-img-small--first">
+						<img src="images/card2.png" alt="" class="cards-img-small cards-img-small--second">
+					</div>
+					
+					
+				</div>
+			</div>
+		
+			</div>
+		</div>
+	</section>
+
+	<!-- RESOURCES -->
+	<section class="resources set-relative">
+		<div class="wrap">
+			<div class="resources-container set-flex">
+				<h2 class="h2">Other <br>Categories</h2>
+				<div class="resources-boxes set-flex">
+					<div class="resources-box set-relative" style="background-image: url('images/category1.jpg');">
+						<div class="overlay overlay-dark"></div>
+						<div class="resources-outer">
+							<h3 class="h3">New Products</h3>
+						</div>
+					</div>
+					<div class="resources-box set-relative" style="background-image: url('images/category2.jpg');">
+						<div class="overlay overlay-dark"></div>
+						<div class="resources-outer">
+							<h3 class="h3">Dining Room</h3>
+						</div>
+					</div>
+					<div class="resources-box set-relative" style="background-image: url('images/category3.jpg');">
+						<div class="overlay overlay-dark"></div>
+						<div class="resources-outer">
+							<h3 class="h3">Home Office</h3>
+						</div>
+					</div>
+					<div class="resources-box set-relative" style="background-image: url('images/category4.jpg');">
+						<div class="overlay overlay-dark"></div>
+						<div class="resources-outer">
+							<h3 class="h3">Living Room</h3>
+						</div>
+					</div>
+					<div class="resources-box set-relative" style="background-image: url('images/category5.jpg');">
+						<div class="overlay overlay-dark"></div>
+						<div class="resources-outer">
+							<h3 class="h3">Outdoor</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- GALLERY -->
+	<section class="gallery bg-white">
+		<div class="wrap">
+			<h2 class="h2 center">Bedrooms Gallery</h2>
+			<div class="gallery-slider">
+				<div class="gallery-item">
+					<div class="set-relative">
+						<div class="slider-overlay"></div>
+						<img src="images/gallery1.jpg" alt="">
+					</div>
+					<h3 class="h3">Bedrooms</h3>
+				</div>
+				<div class="gallery-item">
+					<div class="set-relative">
+						<div class="slider-overlay"></div>
+						<img src="images/gallery2.jpg" alt="">
+					</div>
+					<h3 class="h3">Bathroom</h3>
+				</div>
+				<div class="gallery-item">
+					<div class="set-relative">
+						<div class="slider-overlay"></div>
+						<img src="images/gallery3.jpg" alt="">
+					</div>
+					<h3 class="h3">Kitchen</h3>
+				</div>
+				<div class="gallery-item">
+					<div class="set-relative">
+						<div class="slider-overlay"></div>
+						<img src="images/gallery3.jpg" alt="">
+					</div>
+					<h3 class="h3">Bedrooms</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer class="footer set-relative" style="background-image: url('images/footer.jpg');">
+		<div class="overlay overlay-lighten"></div>
+		<div class="wrap">
+			<div class="footer-container">
+				<div class="footer-top set-flex">
+					<div class="footer-text">
+						<h3 class="h3 footer-title">Join our email list</h3>
+						<p class="footer-description">We're so glad you visited our Web site! And we'd like to stay in touch with you.</p>
+					</div>
+					<div class="footer-btns">
+						<a class="button button--primary" href="#">Consumer</a>
+						<a class="button button--primary" href="#">To the trade</a>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p class="footer-logo">Bernhardt</p>
+					<div class="footer-list set-relative set-flex">
+						<div class="footer-box">
+							<h6 class="h6 footer-box-title">Divisions</h6>
+							<ul class="footer-items">
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Residental</a></li>
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Contract</a></li>
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Hospitality</a></li>
+							</ul>
+						</div>
+						<div class="footer-box">
+							<h6 class="h6 footer-box-title">The Company</h6>
+							<ul class="footer-items">
+								<li class="footer-items-item"><a class="footer-items-link" href="#">About Us</a></li>
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Our History</a></li>
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Social Responsability</a></li>
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Internacional</a></li>
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Furniture Outlet</a></li>
+							</ul>
+						</div>
+						<div class="footer-box">
+							<h6 class="h6 footer-box-title">News</h6>
+							<ul class="footer-items">
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Happenings</a></li>
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Design Spotlight</a></li>
+								<li class="footer-items-item"><a class="footer-items-link" href="#">As Seen In</a></li>
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Press Releases</a></li>
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Accolades</a></li>
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Magazine Ads</a></li>
+							</ul>
+						</div>
+						<div class="footer-box">
+							<h6 class="h6 footer-box-title">Business Tools</h6>
+							<ul class="footer-items">
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Dealer Portal</a></li>
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Marketing Portal</a></li>
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Supplier Portal</a></li>
+							</ul>
+						</div>
+						<div class="footer-box">
+							<h6 class="h6 footer-box-title">Customer Care</h6>
+							<ul class="footer-items">
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Contact Us</a></li>
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Frequently Asked Questions</a></li>
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Warranty</a></li>
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Product Registration</a></li>
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Furniture Care</a></li>
+								<li class="footer-items-item"><a class="footer-items-link" href="#">Recall Notice</a></li>
+							</ul>
+						</div>
+						<div class="footer-box">
+							<h6 class="h6 footer-box-title">Stay in touch</h6>
+							<div class="footer-box-social">
+								<i class="banner-icon fab fa-instagram"></i>
+								<i class="banner-icon fab fa-facebook-f"></i>
+								<i class="banner-icon fab fa-twitter"></i>
+								<i class="banner-icon fab fa-pinterest-p"></i>
+								<i class="banner-icon fab fa-youtube"></i>
+							</div>
+						</div>
+					</div>
+					<div class="footer-copyright set-flex">
+						<p>Copyright © 2020 Bernhardt Furniture Company. All Rights Reserved.</p>
+						<a class="footer-copyright-link" href="#">Privacy Policy.</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="js/banner-slider.js"></script>
+	<script src="js/gallery-slider.js"></script>
+	<script src="js/slick.js"></script>
+	<script src="js/search-popup.js"></script>
+	<script src="js/products.js"></script>
+	<script src="js/product-slider.js"></script>
+	<script src="js/hamburger-menu.js"></script>
+</body>
+</html>

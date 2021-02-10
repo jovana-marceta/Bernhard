@@ -1,0 +1,170 @@
+.cards {
+	padding: 70px 0 0;
+
+	@include for-extra-large-screen {
+		padding: 70px 20px;
+	}
+
+	span {
+		color: $orher;
+	}
+
+	h2, h3 {
+		color: $dark;
+	}
+
+	h2 {
+		border-bottom: 1px solid rgba($orher, .4);
+		padding-bottom: 30px;
+
+	}
+
+	&-container-top {
+		align-items: center;
+		justify-content: space-between;
+		margin: 30px 0;
+	}
+
+	&-group {
+		align-items: stretch;
+		border-bottom: 1px solid rgba($orher, .4);
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&-item {
+		background: linear-gradient(90deg, $dark 70%, $gray 30%);
+		margin: 0 0 30px 0;
+		justify-content: space-between;
+		padding: 30px;
+		width: 30%;
+		&:nth-child(3),
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover {
+			background: linear-gradient(90deg, $orher 70%, $gray 30%);
+			transition: all .4s ease-in;
+
+			h3 {
+				color: $dark;
+			}
+
+			span {
+				color: $dark !important;
+			}
+
+
+			.arrow {
+				border: 1px solid $dark;
+			}
+
+			.arrow .head,
+			.arrow .head:after {
+				border: 1.5px solid $dark;
+			}
+			
+			.arrow .head:after {
+				border-color: $dark;
+			}
+		}
+
+		h3 {
+			color: $orher;
+		}
+
+		@include  for-medium-large-screen {
+			width: 44%;
+		}
+
+		@include for-medium-screen  {
+			margin: 0 10px 80px 0;
+		}
+
+		@include for-medium-screen {
+			margin-right: 0;
+			width: 100%;
+		}
+	}
+
+	&-img-small {
+		height: 120px;
+		width: 150px;
+	}
+	
+	&-img-small--second {
+		display: none;
+	}
+	
+	&-item:hover {
+		.cards-img-small--first {
+			display: none;
+		} 
+		.cards-img-small--second {
+			display: block;
+		}
+	}
+
+	//btn arrow
+	a {
+		bottom: 20px;
+		display: flex;
+		justify-content: flex-start;
+		position: absolute;
+		width: 100%;
+
+		cursor: pointer;
+		transition: all 0.3s ease;
+		@include hover {
+			color: $dark;
+		}
+	}
+	
+	a .arrow {
+		width: 10%;
+		transition: all 0.3s ease;
+	}
+	
+	a:hover .arrow {
+		width: 20%;
+	}
+	
+	.arrow{
+		margin-right: 2em;
+		border: 1px solid $orher;
+		position: relative;
+		background: $orher;
+	}
+	
+	.arrow .head,
+	.arrow .head:after {
+		border: 1.5px solid $orher;
+		border-radius: 2px;
+		width: 8px;
+		position: absolute;
+		right: -5px;
+		top: 2px;
+		transform: rotate(-45deg);
+	}
+	
+	.arrow .head:after {
+		content: "";
+		border-color: $orher;
+		right: -5px;
+		top: -5px;
+		transform: rotate(90deg);
+	}
+
+	&-img {
+		background-position: 100% center;
+		height: 190px;
+		transform: translateY(50px);
+		width: 100%;
+		&:hover {
+			background-position: 50% center;
+			transition: all .2s ease-in;
+		}
+	}
+}
+

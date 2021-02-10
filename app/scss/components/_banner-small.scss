@@ -1,0 +1,35 @@
+.banner--small {
+	padding: 360px 0 140px;
+}
+
+.banner-tags {
+	bottom: 20px;
+	position: absolute; 
+	z-index: 5; 
+	
+	span {
+		display: inline-block;
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+}
+
+.banner-arrow {
+	font-size: 10px;
+	margin-right: 10px;
+}
+
+.banner--accordion {
+	padding: 200px 0 0;
+
+	h1 {
+		margin-bottom: 50px;
+	}
+
+}
+
+.banner-tags--accordion {
+	bottom: 0;
+	position: relative;
+}

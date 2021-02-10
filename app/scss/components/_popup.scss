@@ -1,0 +1,89 @@
+.popup{
+	bottom: 0;
+	display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 3;
+	@extend %bg-image;
+
+	&-logo {
+		position: absolute;
+		top: 37px;
+	}
+	
+	&-menu {
+		padding: 0 200px;
+		top: 60%;
+		width: 100%;
+		@include absolute-center();
+		 &-heading {
+			 padding-bottom: 179px;
+			 @include for-medium-large-screen {
+				padding-bottom: 50px;
+			}
+		} 
+		@include for-medium-large-screen {
+			padding: 0 50px;
+		}
+	}
+	
+	&-menu-container {
+		border-bottom: 1px solid $orher;
+		@include for-medium-large-screen {
+			border-bottom: 0;
+		}
+	}
+	
+	&-items {
+		align-items: flex-start;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding-top: 50px;
+		@include for-medium-large-screen {
+			padding-top: 20px;
+		}
+	}
+	
+	&-box {
+		a {
+			color: $white;
+			@include hover {
+				color: $orher!important;
+				text-decoration: none;
+			}
+		}
+		@include for-large-screen {
+			margin: 0 20px 20px 0;
+			justify-content: flex-start;
+			width: 25%;
+			text-align: center;
+		}
+		@include for-medium-screen {
+			margin: 0 10px 10px 0;
+			width: 25%;
+		}
+	}
+	
+}
+
+a.closebtn {
+	color: $white;
+	font-size: 43px;
+	position: absolute;
+	right: 200px;
+	top: 50px;
+	@include hover {
+		color: $orher;
+		text-decoration: none;
+	}
+	@include for-medium-large-screen {
+		right: 5%;
+	}
+}
+
+
+

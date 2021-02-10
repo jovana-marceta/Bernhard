@@ -1,0 +1,45 @@
+
+
+.collections-top {
+
+	padding: 118px 0 0;
+
+	@include for-extra-large-screen {
+		padding: 118px 50px 0 50px;
+	}
+	@include for-medium-screen {
+		padding: 118px 25px 0 25px;
+	}
+
+	.collections-box {
+		padding: 150px 50px 40px 50px;
+	}
+
+	.collections-reverse {
+		transform: rotate(0deg);
+		top: 150px;
+		right: 50px;
+		left: 50px;
+
+		@include for-large-screen {
+			display: none;
+		}
+	}
+
+	.link-primary {
+		bottom: 20px;
+		display: flex;
+		position: absolute;
+		justify-content: flex-start;
+		width: 50%;
+	}
+
+	h3 {
+		top: 180px;
+		margin-bottom: 0;
+		position: absolute;
+	}
+	.collections-img-top {
+		transform: translateY(-200px);
+	}
+}

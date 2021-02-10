@@ -1,0 +1,15 @@
+.tooltip-item {
+	background-color: $orher;
+	padding: 5px;
+	position: absolute;
+	top: 45px;
+	left: 0;
+	width: 100%;
+	visibility: hidden;
+}
+
+.tooltip-text {
+	font-size: 14px;
+	font-weight: normal;
+	margin-bottom: 5px;
+}

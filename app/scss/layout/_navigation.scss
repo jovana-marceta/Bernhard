@@ -1,0 +1,45 @@
+.nav {
+	@include for-large-screen {
+		display: none;
+	}
+
+	@media only screen and (max-width: $md) {
+		display: none;
+	}
+
+	&-list {
+		align-items: center;	
+	}
+	
+	&-item {
+		border-bottom: 2px solid transparent;
+		padding-bottom: 10px;
+		transition: all .3s ease-in;
+
+		&:not(:last-child) {
+			margin-right: 40px;
+		}
+
+		@include hover {
+			border-bottom: 2px solid $orher;
+		}
+	}
+	
+	&-link {
+		color: $white;
+		text-transform: capitalize;
+		padding: 0;
+
+		@include hover {
+			color: $white;
+	
+			.tooltip-item {
+				visibility: visible;
+			}
+		}
+	}
+}
+
+
+
+
