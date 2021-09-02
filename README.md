@@ -1,6 +1,8 @@
 # Bernhard
 Multi-page website for furniture company. Created using HTML, CSS, JavaScript and jQuery with my Gulp starter.
 
+## [Website preview](https://compassionate-shirley-b1e466.netlify.app/)
+
 ![alt text](https://i.imgur.com/kEVkoH9.png)
 
 ## Installation
