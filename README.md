@@ -1,6 +1,8 @@
 # Bernhard
 Multi-page website for furniture company. Created using HTML, CSS, JavaScript and jQuery with my Gulp starter.
 
+![alt text](https://i.imgur.com/kEVkoH9.png)
+
 ## Installation
 
 Install all modules listed as dependencies in package.json.
